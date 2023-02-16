@@ -4,7 +4,7 @@ import {sequelize} from './mysql'
 export interface TabelaTypes extends Model {
     id_2: number,
     titulo: string,
-    preco: string
+    preco: Number
 }
 
 export const Saidas = sequelize.define<TabelaTypes>('saida',{
@@ -19,7 +19,7 @@ export const Saidas = sequelize.define<TabelaTypes>('saida',{
         allowNull:false
     },
     preco:{
-        type: DataTypes.STRING,
+        type: DataTypes.NUMBER,
         allowNull:false
     }
 },{
